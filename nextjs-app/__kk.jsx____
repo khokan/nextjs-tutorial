@@ -1,0 +1,28 @@
+1. Access main page with page.jsx file
+2. Access details page under main folder create [id] folder and create page.jsx file
+Here # app -> services -> page.jsx   ----main page
+     # app > servies -> [id] -> page.jsx ----details page
+3. get rid of too many pages create folder with () and add relevan folder
+     Here # app -> (authpages) -> Login + Register   ---ommit authpage while route login and register
+4. [72-7] layout.js is the main or root layout. can create diif layout under dashboard. so, need to create another layout.jsx under this.
+     Here app -> dashboards -> layout.jsx file
+5. [72-8] using spread operator [...] can load dynamic pages. 
+     Here app -> about -> [...slugs] -> page.jsx ---whatever you write shown in server terminal
+6. [72-9]
+     create a not-found.jsx file under app folder to show not found page when page is not found
+     create a loading.jsx file under app folder to show loading while page is loading
+7. [72-10] create a middleware.js file under src folder to protect routes
+     Here src -> middleware.js file
+
+----------------------
+# client side rendering (CSR)
+Execute js code on client side and generate html on client side
+Best for Single Page Applications (SPA) and user interactions (e.g. dashboards, admin panels, interactive forms)
+# server side rendering (SSR & SSG)
+Execute js code on server side and generate html on server side and send to client
+@ server side rendering (SSR)
+Generate html on server side and send to client.
+Best for dynamic pages where content changes frequently and real time data is required and SEO is important (e.g. e-commerce, social media, news)
+@ static site generation (SSG)
+Generate html at build time and serve it as static files.
+Best for static pages where content does not change frequently and SEO is important (e.g. blog, documentation,portfolio)
