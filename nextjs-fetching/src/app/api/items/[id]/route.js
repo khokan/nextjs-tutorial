@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 export async function GET(req, { params }) {
   const p = await params;
   console.log("id", p);
-  const result = await dbConnect("coffees").findOne({
+  const result = await dbConnect("products").findOne({
     _id: new ObjectId(p.id),
   });
   return Response.json({ result });
@@ -13,7 +13,7 @@ export async function GET(req, { params }) {
 export async function DELETE(req, { params }) {
   const p = await params;
   console.log("id", p);
-  const result = await dbConnect("coffees").deleteOne({
+  const result = await dbConnect("products").deleteOne({
     _id: new ObjectId(p.id),
   });
   return Response.json({ result });
@@ -23,7 +23,7 @@ export async function PATCH(req, { params }) {
   const p = await params;
   const postedData = await req.json();
   const filter = { _id: new ObjectId(p.id) };
-  const result = await dbConnect("coffees").updateOne(
+  const result = await dbConnect("products").updateOne(
     filter,
     { $set: { ...postedData } },
     { upsert: true }
