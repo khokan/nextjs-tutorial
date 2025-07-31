@@ -2,8 +2,14 @@
 Here app -> meals -> page.jsx server component fetch data and receive props as searchParams and display it.
 Here app -> meals -> components -> MealSearchInput is a client component that allows users to input search terms. 
     It uses the `useSearchParams` hook to update the URL with the search term when the user submits the form.
-    
+
 Here products -> add -> page.jsx is a server component that renders the AddForm client component.
 The AddForm component handles the form submission to add a new product.
 Here products -> page.jsx is a server component that fetches and displays products.
  cache is set to "force-cache" to ensure the data is fetched  from the cache.
+
+ # Loading spinner is added to the products page while data is being fetched.
+ # redirect from client component to server component using `useRouter` hook.
+    The `useRouter` hook is used to programmatically navigate to the products page after a successful form submission.
+ # redircts from server component to server component using `redirect` function.
+ # Redirects are added in next.config.mjs to redirect from /products/add to /dashboard/products/add.

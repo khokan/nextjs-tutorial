@@ -8,6 +8,16 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // Wildcard path matching
+      {
+        source: "/products/add",
+        destination: "/dashboard/products/add",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

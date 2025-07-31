@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import React from "react";
 
 const page = async () => {
@@ -6,6 +7,11 @@ const page = async () => {
   });
   const result = await res.json();
   const products = result.data;
+
+  // if (!products || products.length > 3) {
+  //   redirect("/");
+  // }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {products.map((item) => (

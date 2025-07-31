@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const AddForm = () => {
+  const router = useRouter();
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -28,6 +30,7 @@ const AddForm = () => {
     } else {
       console.error("Failed to add product");
     }
+    router.push(`/products`);
   };
 
   return (
@@ -40,7 +43,9 @@ const AddForm = () => {
           placeholder="Product Description"
         />
         <input type="number" name="price" placeholder="Product Price" />
-        <button type="submit">Add Product</button>
+        <button className="btn btn-primary cursor-pointer" type="submit">
+          Add Product
+        </button>
       </form>
     </div>
   );
