@@ -11,5 +11,17 @@ Here products -> page.jsx is a server component that fetches and displays produc
  # Loading spinner is added to the products page while data is being fetched.
  # redirect from client component to server component using `useRouter` hook.
     The `useRouter` hook is used to programmatically navigate to the products page after a successful form submission.
+    ------------------------
  # redircts from server component to server component using `redirect` function.
  # Redirects are added in next.config.mjs to redirect from /products/add to /dashboard/products/add.
+ ----------------------------
+ # using `process.env` to access environment variables for the server URL.
+ # The `NEXT_PUBLIC_NODE_SERVER_URL` environment variable is used for both client and server to construct the API endpoint for fetching and submitting data.
+ ---------------------------------
+ # Access data from the server from database directly instead of using API routes.
+  here getproducts and postSingleData functions are used to fetch and post data directly from the database.
+  ----------------------------------
+  # login functionality is added using NextAuth.js.
+  The `next-auth` package is used to handle authentication, with a custom credentials provider.
+  The `authorize` function is used to validate user credentials and return user information.    
+import LoginButton from "@/components/LoginButton";
