@@ -24,4 +24,5 @@ Here products -> page.jsx is a server component that fetches and displays produc
   # login functionality is added using NextAuth.js.
   The `next-auth` package is used to handle authentication, with a custom credentials provider.
   The `authorize` function is used to validate user credentials and return user information.    
-import LoginButton from "@/components/LoginButton";
+  import LoginButton from "@/components/LoginButton";
+  # If login is successful, it generates next-auth.session-token
