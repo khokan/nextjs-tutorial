@@ -1,5 +1,5 @@
 "use client";
-import { postSingleData } from "@/app/actions/postSingleData";
+import { postSingleData } from "@/app/actions/products/postSingleData";
 import { useRouter } from "next/navigation";
 import React from "react";
 

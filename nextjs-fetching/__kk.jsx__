@@ -26,3 +26,9 @@ Here products -> page.jsx is a server component that fetches and displays produc
   The `authorize` function is used to validate user credentials and return user information.    
   import LoginButton from "@/components/LoginButton";
   # If login is successful, it generates next-auth.session-token
+---------------
+# from server component to client component data passing using props.
+  Here UserInfo is a client component that receives session data as props from the server component (page.js).
+  The UserInfo component displays user information if the user is logged in, or a message indicating that no user is logged in.
+  The session data is fetched on the server side using `getServerSession` and passed down to the UserInfo component.
+  add NEXTAUTH_SECRET in .env.local file. to get session from server.

@@ -1,7 +1,7 @@
 import dbConnect from "@/lib/dbConnect";
 import { redirect } from "next/navigation";
 import React from "react";
-import { getProducts } from "@/app/actions/getProductsPage";
+import { getProducts } from "../actions/products/getProductsPage";
 
 const ProductsPage = async () => {
   // Uncomment the following lines if you want to use an API route instead
